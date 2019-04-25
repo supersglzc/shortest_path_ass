@@ -1,0 +1,397 @@
+ABZ	 Aberdeen, Scotland, UK 
+AUH	 Abu Dhabi, U.A. Emirates 
+ACA	 Acapulco, Mexico 
+ACC	 Accra, Ghana 
+ADD	 Addis Ababa, Ethiopia 
+CAK	 Akron, OH 
+ALS	 Alamosa, CO 
+ALB	 Albany, NY 
+ABQ	 Albuquerque, NM 
+ALY	 Alexandria, Egypt 
+ABE	 Allentown, PA 
+ALA	 Almaty, Kazakhstan 
+AMA	 Amarillo, TX 
+AMM	 Amman, Jordan 
+AMS	 Amsterdam, Netherlands 
+ANC	 Anchorage, AK 
+AOI	 Ancona, Italy 
+QXG	 Angers, France - Rail 
+ESB	 Ankara, Turkey 
+ANU	 Antigua, West Indies 
+APW	 Apia Faleolo, W. Samoa 
+ATW	 Appleton, WI 
+AUA	 Aruba, Aruba 
+ASB	 Ashgabat, Turkmenistan 
+ASM	 Asmara, Eritrea 
+ASE	 Aspen, CO 
+ATL	 Atlanta, GA 
+AKL	 Auckland, New Zealand 
+AGS	 Augusta, GA 
+AUS	 Austin, TX 
+XZN	 Avignon, France - Rail 
+BFL	 Bakersfield, CA 
+BAK	 Baku, Azerbaijan 
+BWI	 Baltimore, MD 
+BLR	 Bangalore, India 
+BKK	 Bangkok, Thailand 
+BRI	 Bari, Italy 
+PEK	 Beijing [Peking], China 
+Cit	 Belfast 
+BZE	 Belize, Belize 
+BGO	 Bergen, Norway 
+TXL	 Berlin [Tegel], Germany 
+BDA	 Bermuda, Bermuda 
+BIL	 Billings, MT 
+BGM	 Binghamton, NY 
+BHM	 Birmingham, AL 
+BIS	 Bismarck, ND 
+BMI	 Bloomington-Normal, IL 
+BOI	 Boise, ID 
+BLQ	 Bologna, Italy 
+ZFQ	 Bordeaux, France - Rail 
+BOS	 Boston, MA 
+BZN	 Bozeman, MT 
+BSB	 Brasilia, Brazil 
+BRE	 Bremen, Germany 
+BGI	 Bridgetown, Barbados 
+BNE	 Brisbane, Australia 
+BRU	 Brussels, Belgium 
+OTP	 Bucharest, Romania 
+BUD	 Budapest, Hungary 
+EZE	 Buenos Aires, Argentina 
+BUF	 Buffalo, NY 
+BUR	 Burbank, CA 
+BTV	 Burlington, VT 
+PUS	 Busan, S. Korea 
+CNS	 Cairns, Australia 
+CAI	 Cairo, Egypt 
+YYC	 Calgary, AB, Canada 
+CUN	 Cancun, Mexico 
+CPT	 Cape Town, S. Africa 
+CLD	 Carlsbad, CA 
+CPR	 Casper, WY 
+CID	 Cedar Rapids, IA 
+CDR	 Chadron, NE 
+CHS	 Charleston, SC 
+CRW	 Charleston, WV 
+CLT	 Charlotte, NC 
+CHO	 Charlottesville, VA 
+MAA	 Chennai/Madras, India 
+CYS	 Cheyenne, WY 
+ORD	 Chicago [O'Hare], IL 
+CIC	 Chico, CA 
+CHC	 Christchurch, New Zealand 
+CVG	 Cincinnati, OH 
+CLE	 Cleveland, OH 
+COD	 Cody, WY 
+CGN	 Cologne/Bonn, Germany 
+COS	 Colorado Springs, CO 
+CAE	 Columbia, SC 
+CMH	 Columbus, OH 
+CPH	 Copenhagen, Denmark 
+CEZ	 Cortez, CO 
+CEC	 Crescent City, CA 
+CWB	 Curitiba, Brazil 
+DFW	 Dallas/Ft Worth, TX 
+DAY	 Dayton, OH 
+DEL	 Delhi, India 
+DEN	 Denver, CO 
+DSM	 Des Moines, IA 
+DTW	 Detroit, MI 
+DIK	 Dickinson, ND 
+DDC	 Dodge City, KS 
+DRS	 Dresden, Germany 
+DXB	 Dubai, U.A. Emirates 
+DUB	 Dublin, Ireland 
+DUD	 Dunedin, New Zealand 
+DRO	 Durango, CO 
+DUS	 Dusseldorf, Germany 
+EDI	 Edinburgh, Scotland, UK 
+YEG	 Edmonton, AB, Canada 
+ELP	 El Paso, TX 
+EUG	 Eugene, OR 
+ACV	 Eureka/Arcata, CA 
+FAR	 Fargo, ND 
+FMN	 Farmington, NM 
+FAY	 Fayetteville, NC 
+FLR	 Florence [Peretola], Italy 
+FLO	 Florence, SC 
+PSA	 Florence/Pisa [Gal Galilei], Italy 
+FLN	 Florianopolis, Brazil 
+RSW	 Fort Myers, FL 
+FWA	 Fort Wayne, IN 
+FOR	 Fortaleza, Brazil 
+FRA	 Frankfurt, Germany 
+FPO	 Freeport, Bahamas 
+FAT	 Fresno, CA 
+FLL	 Ft. Lauderdale/Hollywood, FL 
+FUK	 Fukuoka, Japan 
+GNV	 Gainesville, FL 
+GCK	 Garden City, KS 
+GVA	 Geneva, Switzerland 
+GOA	 Genoa, Italy 
+GCC	 Gillette, WY 
+GLA	 Glasgow, Scotland, UK 
+GOT	 Gothenburg, Sweden 
+GCM	 Grand Cayman, West Indies 
+GRI	 Grand Island, NE 
+GJT	 Grand Junction, CO 
+GRR	 Grand Rapids, MI 
+GRZ	 Graz, Austria 
+GRB	 Green Bay, WI 
+GSO	 Greensboro, NC 
+PGV	 Greenville, NC 
+GSP	 Greenville, SC 
+GND	 Grenada, Grenada 
+GDL	 Guadalajara, Mexico 
+GUM	 Guam, Guam 
+GUA	 Guatemala City, Guatemala 
+GUC	 Gunnison, CO 
+YHZ	 Halifax, NS, Canada 
+HAM	 Hamburg, Germany 
+HAJ	 Hanover, Germany 
+MDT	 Harrisburg, PA 
+BDL	 Hartford, CT 
+HDN	 Hayden, CO 
+HYS	 Hays, KS 
+HEL	 Helsinki, Finland 
+ITO	 Hilo, HI 
+SGN	 Ho Chi Minh City, Vietnam 
+HKG	 Hong Kong, Hong Kong 
+HNL	 Honolulu, HI 
+IAH	 Houston, TX 
+HSV	 Huntsville, AL 
+IPL	 Imperial, CA 
+IND	 Indianapolis, IN 
+INN	 Innsbruck, Austria 
+IYK	 Inyokern, CA 
+IST	 Istanbul, Turkey 
+JAC	 Jackson Hole, WY 
+JAX	 Jacksonville, FL 
+OAJ	 Jacksonville, NC 
+JNB	 Johannesburg, S. Africa 
+OGG	 Kahului, HI 
+AZO	 Kalamazoo, MI 
+MCI	 Kansas City, MO 
+JHM	 Kapalua,HI 
+KTW	 Katowice, Poland 
+EAR	 Kearney, NE 
+EYW	 Key West, FL 
+KBP	 Kiev, Ukraine 
+KLU	 Klagenfurt, Austria 
+TYS	 Knoxville, TN 
+KOA	 Kona, HI 
+KWI	 Kuwait City, Kuwait 
+LOS	 Lagos, Nigeria 
+LNY	 Lanai City, HI 
+LAN	 Lansing, MI 
+LAR	 Laramie, WY 
+LAS	 Las Vegas, NV 
+ZLN	 Le Mans, France - Rail 
+LBA	 Leeds/Bradford, England, UK 
+LEJ	 Leipzig, Germany 
+BJX	 Leon/Guanajuato, Mexico 
+LEX	 Lexington, KY 
+LBL	 Liberal, KS 
+LIH	 Lihue, HI 
+XDB	 Lille, France - Rail 
+LNK	 Lincoln, NE 
+LNZ	 Linz, Austria 
+LIS	 Lisbon, Portugal 
+LHR	 London [Heathrow], England, UK 
+LAX	 Los Angeles, CA 
+SDF	 Louisville, KY 
+LYS	 Lyon, France 
+XYD	 Lyon, France - Rail 
+MSN	 Madison, WI 
+MAD	 Madrid, Spain 
+MLA	 Malta, Malta 
+MAO	 Manaus, Brazil 
+MAN	 Manchester, England, UK 
+MHT	 Manchester, NH 
+MRS	 Marseille, France 
+XRF	 Marseille, France - Rail 
+MZT	 Mazatlan, Mexico 
+MCK	 McCook, NE 
+MFR	 Medford, OR 
+MEL	 Melbourne, Australia 
+MEM	 Memphis, TN 
+MEX	 Mexico City, Mexico 
+MIA	 Miami, FL 
+MXP	 Milan [Malpensa], Italy 
+MKE	 Milwaukee, WI 
+MSP	 Minneapolis, MN 
+MSO	 Missoula, MT 
+CNY	 Moab, UT 
+MOD	 Modesto, CA 
+MLI	 Moline, IL 
+MBJ	 Montego Bay, Jamaica 
+MRY	 Monterey, CA 
+MTY	 Monterrey, Mexico 
+MVD	 Montevideo, Uruguay 
+XPJ	 Montpellier, France - Rail 
+YUL	 Montreal, QC, Canada 
+MTJ	 Montrose, CO 
+MLM	 Morelia, Mexico 
+BOM	 Mumbai/Bombay, India 
+MUC	 Munich, Germany 
+MCT	 Muscat, Oman 
+MYR	 Myrtle Beach, SC 
+NAN	 Nadi, Fiji 
+NGO	 Nagoya, Japan 
+QJZ	 Nantes, France - Rail 
+NAP	 Naples, Italy 
+BNA	 Nashville, TN 
+NAS	 Nassau, Bahamas 
+EWN	 New Bern NC 
+MSY	 New Orleans, LA 
+JFK	 New York [Kennedy], NY 
+LGA	 New York [LaGuardia], NY 
+EWR	 Newark, NJ 
+PHF	 Newport News, VA 
+NCE	 Nice, France 
+OFK	 Norfolk, NE 
+ORF	 Norfolk, VA 
+LBF	 North Platte, NE 
+NUE	 Nuremberg, Germany 
+OAK	 Oakland, CA 
+OKA	 Okinawa, Japan 
+OKC	 Oklahoma City, OK 
+OMA	 Omaha, NE 
+ONT	 Ontario, CA 
+SNA	 Orange County, CA 
+MCO	 Orlando, FL 
+ITM	 Osaka [Itami], Japan 
+KIX	 Osaka [Kansai], Japan 
+OSL	 Oslo, Norway 
+YOW	 Ottawa, ON, Canada 
+OXR	 Oxnard, CA 
+PGA	 Page, AZ 
+PSP	 Palm Springs, CA 
+PPT	 Papeete, Tahiti 
+CDG	 Paris [Ch. De Gaulle], France 
+PSC	 Pasco, WA 
+PNS	 Pensacola, FL 
+PIA	 Peoria, IL 
+PER	 Perth, Australia 
+PHL	 Philadelphia, PA 
+PHX	 Phoenix, AZ 
+PIR	 Pierre, SD 
+PIT	 Pittsburgh, PA 
+XOP	 Poitiers, France - Rail 
+PWM	 Portland, ME 
+PDX	 Portland, OR 
+POA	 Porto Alegre, Brazil 
+OPO	 Porto, Portugal 
+PRG	 Prague, Czech Republic 
+PVD	 Providence, RI 
+PLS	 Providenciales, Turks Caicos Islands 
+PUB	 Pueblo, CO 
+PVR	 Puerto Vallarta, Mexico 
+PUJ	 Punta Cana, Dominican Republic 
+YQB	 Quebec City, QC, Canada 
+ZQN	 Queenstown, New Zealand 
+RDU	 Raleigh, NC 
+RAP	 Rapid City, SD 
+RAR	 Rarotonga, Cook Islands 
+RDD	 Redding, CA 
+RDM	 Redmond, OR 
+ZFJ	 Rennes, France - Rail 
+RNO	 Reno/Tahoe, NV 
+RIC	 Richmond, VA 
+RIX	 Riga, Latvia 
+GIG	 Rio De Janeiro, Brazil 
+RIW	 Riverton, WY 
+ROA	 Roanoke, VA 
+ROC	 Rochester, NY 
+RKS	 Rock Springs, WY 
+FCO	 Rome [Fiumicino], Italy 
+SMF	 Sacramento, CA 
+MBS	 Saginaw, MI 
+SBY	 Salisbury-Ocean City, MD 
+SLC	 Salt Lake City, UT 
+SSA	 Salvador, Brazil 
+SZG	 Salzburg, Austria 
+SAT	 San Antonio, TX 
+SAN	 San Diego, CA 
+SFO	 San Francisco, CA 
+SJC	 San Jose, CA 
+SJO	 San Jose, Costa Rica 
+SJD	 San Jose/Los Cabos, Mexico 
+SJU	 San Juan, Puerto Rico 
+SBP	 San Luis Obispo, CA 
+SAL	 San Salvador, El Salvador 
+SBA	 Santa Barbara, CA 
+SAF	 Santa Fe, NM 
+SMX	 Santa Maria, CA 
+SDQ	 Santo Domingo, Dominican Republic 
+GRU	 Sao Paulo [Guarulhos], Brazil 
+CTS	 Sapporo [Chitose], Japan 
+SJJ	 Sarajevo, Bosnia Herzegovina 
+SRQ	 Sarasota, FL 
+SAV	 Savannah, GA 
+BFF	 Scottsbluff, NE 
+SEA	 Seattle, WA 
+ICN	 Seoul [Incheon], S. Korea 
+Pu 	 Shanghai 
+SNN	 Shannon, Ireland 
+SHR	 Sheridan, WY 
+SIN	 Singapore, Singapore 
+FSD	 Sioux Falls, SD 
+SKP	 Skopje, Macedonia 
+SOF	 Sofia, Bulgaria 
+SBN	 South Bend, IN 
+GEG	 Spokane, WA 
+SPI	 Springfield, IL 
+SGF	 Springfield, MO 
+STX	 St Croix, U.S. Virgin Islands 
+SKB	 St Kitts, Leeward Islands 
+STL	 St Louis, MO 
+UVF	 St Lucia [Hewanorra], St Lucia 
+SXM	 St Maarten, Neth Antilles 
+STT	 St Thomas, U.S. Virgin Islands 
+SGU	 St. George, UT 
+SCE	 State College, PA 
+SVG	 Stavanger, Norway 
+ARN	 Stockholm, Sweden 
+STR	 Stuttgart, Germany 
+SYD	 Sydney, Australia 
+SYR	 Syracuse, NY 
+TPE	 Taipei, Taiwan 
+TLH	 Tallahassee, FL 
+TPA	 Tampa, FL 
+MME	 Teesside, England, UK 
+TLV	 Tel Aviv, Israel 
+TEX	 Telluride, CO 
+HND	 Tokyo [Haneda], Japan 
+NRT	 Tokyo [Narita], Japan 
+YYZ	 Toronto [Pearson], ON, Canada 
+XSH	 Tours, France - Rail 
+TVC	 Traverse City, MI 
+TRI	 Tri-City Airport, VA 
+TRS	 Trieste, Italy 
+TUS	 Tucson, AZ 
+TUL	 Tulsa, OK 
+EGE	 Vail/Eagle, CO 
+XHK	 Valence, France - Rail 
+YVR	 Vancouver, BC, Canada 
+VCE	 Venice, Italy 
+VEL	 Vernal, UT 
+VRN	 Verona, Italy 
+VIE	 Vienna, Austria 
+WAW	 Warsaw, Poland 
+IAD	 Washington [Dulles], DC 
+DCA	 Washington [Reagan], DC 
+CWA	 Wausau, WI 
+WLG	 Wellington, New Zealand 
+PBI	 West Palm Beach, FL 
+HPN	 White Plains, NY 
+ICT	 Wichita, KS 
+AVP	 Wilkes-Barre, PA 
+ISN	 Williston, ND 
+ILM	 Wilmington, NC 
+YWG	 Winnipeg, MB, Canada 
+WRL	 Worland, WY 
+YUM	 Yuma, AZ 
+ZCL	 Zacatecas, Mexico 
+ZRH	 Zurich, Switzerland 

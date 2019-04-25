@@ -1,0 +1,9 @@
+ALB	 Albany, NY 
+ORD	 Chicago [O'Hare], IL 
+DFW	 Dallas/Ft Worth, TX 
+DEN	 Denver, CO 
+JFK	 New York [Kennedy], NY 
+PDX	 Portland, OR 
+SFO	 San Francisco, CA 
+SEA	 Seattle, WA 
+IAD	 Washington [Dulles], DC 
