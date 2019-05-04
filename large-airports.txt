@@ -333,7 +333,7 @@ SAV	 Savannah, GA
 BFF	 Scottsbluff, NE 
 SEA	 Seattle, WA 
 ICN	 Seoul [Incheon], S. Korea 
-Pu 	 Shanghai 
+PVG	 Shanghai 
 SNN	 Shannon, Ireland 
 SHR	 Sheridan, WY 
 SIN	 Singapore, Singapore 
