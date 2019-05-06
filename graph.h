@@ -45,7 +45,6 @@ typedef struct graph2{
 	Edge2 * edge;
 }Graph2;
 
-
 PriorityHeap * create_heap(int size);
 void insert(PriorityHeap * heap, int name, int score);
 void move(PriorityHeap * heap, int index);

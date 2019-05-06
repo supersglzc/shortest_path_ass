@@ -253,14 +253,14 @@ int main(int argc, char **argv ){
 					dijkstra(new, name_number[hash(air1[i])], name_number[hash(air2[i])], length_of_airports, node, names2);
 					result1[i] = new->vertex[name_number[hash(air2[i])]]->cost;
 					free(node);
-					for (int i = 0; i < length_of_airports; i++){
-                				if(new->vertex[i]) {
-                					for(int j = 0; j < (new->vertex[i])->length; j++){
-                        					free((new->vertex[i])->edge[j]);
+					for (int k = 0; k < length_of_airports; k++){
+                				if(new->vertex[k]) {
+                					for(int j = 0; j < (new->vertex[k])->length; j++){
+                        					free((new->vertex[k])->edge[j]);
                 					}
-                					free((new->vertex[i])->edge);
+                					free((new->vertex[k])->edge);
                 				}
-                				free(new->vertex[i]);
+                				free(new->vertex[k]);
         				}
         				free(new->vertex);
 				        free(new);
@@ -288,14 +288,14 @@ int main(int argc, char **argv ){
 					fclose(file2);	
 					Graph2 * new2 = create_bellman(length_of_airports, 2 * count);
 					int j = 0;
-					for (int i = 0; i < count * 2; i ++){
-						new2->edge[i].src = name_number[hash(airports1[j])];
-						new2->edge[i].dest = name_number[hash(airports2[j])];
-						new2->edge[i].weight = distance[j];
-						i ++;
-						new2->edge[i].src = name_number[hash(airports2[j])];
-                                                new2->edge[i].dest = name_number[hash(airports1[j])];
-                                                new2->edge[i].weight = distance[j];
+					for (int k = 0; k < count * 2; k ++){
+						new2->edge[k].src = name_number[hash(airports1[j])];
+						new2->edge[k].dest = name_number[hash(airports2[j])];
+						new2->edge[k].weight = distance[j];
+						k ++;
+						new2->edge[k].src = name_number[hash(airports2[j])];
+                                                new2->edge[k].dest = name_number[hash(airports1[j])];
+                                                new2->edge[k].weight = distance[j];
 						j ++;
 					}
 					result2[i] = BellmanFord(new2, name_number[hash(air1[i])], name_number[hash(air2[i])]);

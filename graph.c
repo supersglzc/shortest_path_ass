@@ -12,35 +12,44 @@ PriorityHeap * create_heap(int size){
 	return heap;
 }
 
+
 void insert(PriorityHeap * h, int name, int score){
 	Node buffer;
-	int time;
-	int time2;
+        int temp, time, time2;
     	if (h->index[name] == -1){
-        	Node data = {name, score};
+		Node data = {name, score};
         	h->array[h->count] = data;
         	h->index[name]=h->count;
 		time = h->count;
-		time2 = (time - 1)/2;
+		time2 = (h->count - 1) / 2;
+		while((h->array[time]).score < (h->array[time2]).score){
+        		temp = h->index[(h->array[time2]).name];
+        		h->index[(h->array[time2]).name] = h->index[(h->array[time]).name];
+        		h->index[(h->array[time]).name] = temp;
+        		buffer = h->array[time2];
+        		h->array[time2] = h->array[time];
+        		h->array[time] = buffer;
+        		time = time2;
+        		time2 = (time2 - 1)/2;
+		}
         	h->count++;
     	}else{
-		if ((h->array[h->index[name]]).score > score){
-            		(h->array[h->index[name]]).score = score;
-            		time = h->index[name];
-			time2 = (time - 1)/2;
-		}
-	}
-	int current;
-	while((h->array[time]).score < (h->array[time2]).score){
-        	current = h->index[(h->array[time2]).name];
-        	h->index[(h->array[time2]).name] = h->index[(h->array[time]).name];
-        	h->index[(h->array[time]).name] = current;
-        	buffer = h->array[time2];
-        	h->array[time2] = h->array[time];
-        	h->array[time] = buffer;
-        	time = time2;
-        	time2 = time;
-	}
+		if((h->array[h->index[name]]).score > score){
+        		(h->array[h->index[name]]).score = score;
+			time = h->index[name];
+        		time2 = (h->index[name] - 1) / 2;
+        		while((h->array[time]).score < (h->array[time2]).score){
+        			temp = h->index[(h->array[time2]).name];
+     		   		h->index[(h->array[time2]).name] = h->index[(h->array[time]).name];
+        			h->index[(h->array[time]).name] = temp;
+        				buffer = h->array[time2];
+        			h->array[time2] = h->array[time];
+        			h->array[time] = buffer;
+        			time = time2;
+        			time2 = (time2 - 1)/2;
+        		}
+        	}
+    	}
 }
 
 int remove_with_min(PriorityHeap * h){
