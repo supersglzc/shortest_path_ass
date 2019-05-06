@@ -114,7 +114,7 @@ int main(int argc, char **argv ){
 	int command = ask_command(airport1, airport2);
 	while(command != 2){
 		if (command == 1){
-			printf("How to use the program:\n1. Enter 'quit' to end the program\n2. Enter 'airport' to see all airports' names and their abbreviation\n3. Enter distance <airport1> <airport2> (both names are abbreviations) to find the shortest distance between two airports!\n\n");
+			printf("How to use the program:\n1. Enter 'quit' to end the program\n2. Enter 'airport' to see all airports' names and their abbreviation\n3. Enter distance <airport1> <airport2> (both names are abbreviations) to find the shortest distance between two airports!\n5. Enter 'test' to see the running time\n\n");
 		}else if (command == 3){
 			for (int i = 0; i < length_of_airports; i ++){
 				printf("%s\n", airports[i]);
@@ -230,12 +230,10 @@ int main(int argc, char **argv ){
 					air2[i - 200][4] = '\0';
 				}
 			}
+			int result1[200];
+			int result2[200];
 			struct timeval tv1, tv2, tv3, tv4;
 			double time1, time2;
-//			int result1[200];
-//			int result2[200];
-
-
 			gettimeofday(&tv1, NULL);
 			for (int i = 0; i < 200; i ++){
 				FILE * file2 = fopen(argv[2], "r");
@@ -253,7 +251,19 @@ int main(int argc, char **argv ){
 					fclose(file2);
 					Vertex * node = malloc(sizeof(node));
 					dijkstra(new, name_number[hash(air1[i])], name_number[hash(air2[i])], length_of_airports, node, names2);
-//					result1[i] = new->vertex[name_number[hash(air2[i])]]->cost;
+					result1[i] = new->vertex[name_number[hash(air2[i])]]->cost;
+					free(node);
+					for (int i = 0; i < length_of_airports; i++){
+                				if(new->vertex[i]) {
+                					for(int j = 0; j < (new->vertex[i])->length; j++){
+                        					free((new->vertex[i])->edge[j]);
+                					}
+                					free((new->vertex[i])->edge);
+                				}
+                				free(new->vertex[i]);
+        				}
+        				free(new->vertex);
+				        free(new);
 				}
 			}
 			gettimeofday(&tv2, NULL);
@@ -288,14 +298,22 @@ int main(int argc, char **argv ){
                                                 new2->edge[i].weight = distance[j];
 						j ++;
 					}
-//					result2[i] = BellmanFord(new2, name_number[hash(air1[i])], name_number[hash(air2[i])]);
+					result2[i] = BellmanFord(new2, name_number[hash(air1[i])], name_number[hash(air2[i])]);
+					free(new2->edge);
+					free(new2);
 				}
 			}
 			gettimeofday(&tv4, NULL);
 			time2 = ((double)(tv4.tv_usec - tv3.tv_usec)) / 1000000 + ((double)(tv4.tv_sec - tv3.tv_sec));
 			printf("The dijkstra runs %f\n", time1);
 			printf("The bellman ford runs %f\n", time2);
-			printf("\n");		
+			int tr = 0;		
+			for(int i = 0; i < 200; i ++){
+				if (result1[i] == result2[i])
+					tr = 1;
+			}
+			if (tr)
+				printf("correct!\n\n");
 		}else
 			printf("Never here\n");
 		command = ask_command(airport1, airport2);
