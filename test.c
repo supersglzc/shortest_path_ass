@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include <stdbool.h>
 #include "graph.h"
 
@@ -152,7 +149,54 @@ int main(int argc, char **argv ){
 					Vertex * node = malloc(sizeof(node));
 					dijkstra(new, airport11, airport22, length_of_airports, node, names2);
 					printf("Dijkstra Total Distance: %d\n", new->vertex[airport22]->cost);
-					printf("\n");
+					for (int i = 0; i < length_of_airports; i++){
+                				if(new->vertex[i]) {
+                					for(int j = 0; j < (new->vertex[i])->length; j++){
+                        					free((new->vertex[i])->edge[j]);
+                					}
+                					free((new->vertex[i])->edge);
+                				}
+                				free(new->vertex[i]);
+        				}
+        				free(new->vertex);
+				        free(new);
+					
+				}else{
+					perror(argv[2]);
+				}
+				
+				FILE * file3 = fopen(argv[2], "r");
+                                if (file2 != NULL){
+					char airports1 [5000][4];
+					char airports2 [5000][4];
+					int distance [5000];
+					for (int i = 0; i < 5000; i ++){
+						airports1[i][4] = '\0';
+						airports1[i][4] = '\0';
+						distance[i] = -1;
+					}	
+					int count = 0;
+					while(fscanf(file3, "%s %s %d", airports1[count], airports2[count], &distance[count]) != EOF){
+						count ++;
+					}
+					fclose(file3);	
+					Graph2 * new2 = create_bellman(length_of_airports, 2 * count);
+					int j = 0;
+					for (int i = 0; i < count * 2; i ++){
+						new2->edge[i].src = name_number[hash(airports1[j])];
+						new2->edge[i].dest = name_number[hash(airports2[j])];
+						new2->edge[i].weight = distance[j];
+						i ++;
+						new2->edge[i].src = name_number[hash(airports2[j])];
+                                                new2->edge[i].dest = name_number[hash(airports1[j])];
+                                                new2->edge[i].weight = distance[j];
+						j ++;
+					}
+//					printf("%d, %d\n", airport11, airport22);
+					int dis = BellmanFord(new2, airport11, airport22);
+					printf("BellmanFord Total Distance: %d\n", dis);
+					free(new2->edge);
+					free(new2);	
 				}else{
 					perror(argv[2]);
 				}
@@ -164,10 +208,12 @@ int main(int argc, char **argv ){
 				airport1[i] = '\0';
 				airport2[i] = '\0';
 			}
+			printf("\n");
 		}else
 			printf("Never here\n");
 		command = ask_command(airport1, airport2);
 	}
 	printf("Good Bye!\n");
+	free(names2);
 	return 0;
 }

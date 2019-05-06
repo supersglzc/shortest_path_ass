@@ -142,6 +142,9 @@ void dijkstra(Graph * g, int airport1, int airport2, int length, Vertex * node, 
         	printf("%s->%s:%d\n", name[next->prev], name[node->edge[node->next]->vertex], node->edge[node->next]->value);
 		node = next;
     	}
+	free(heap->index);
+	free(heap->array);
+	free(heap);
 }
 
 void move(PriorityHeap * heap, int count){
@@ -164,3 +167,46 @@ void move(PriorityHeap * heap, int count){
         	move(heap, min);
     	}
 }
+
+Graph2 * create_bellman(int v, int e){
+	Graph2 * g = malloc(sizeof(Graph2));
+	g->V = v;
+	g->E = e;
+	g->edge = calloc(e, sizeof(Edge2));
+
+	return g; 	
+}
+
+void printArr(int dist[], int n) 
+{ 
+    printf("Vertex   Distance from Source\n"); 
+    for (int i = 0; i < n; ++i) 
+        printf("%d \t\t %d\n", i, dist[i]); 
+}
+
+int BellmanFord(Graph2 * g, int airport1, int airport2){
+	int V = g->V; 
+    	int E = g->E; 
+    	int dist[V]; 
+	for (int i = 0; i < V; i++){ 
+        	dist[i] = INT_MAX; 
+	}
+    	dist[airport1] = 0;
+	for (int i = 1; i <= V - 1; i++){ 
+        	for (int j = 0; j < E; j++){ 
+            		int u = g->edge[j].src; 
+            		int v = g->edge[j].dest; 
+            		int weight = g->edge[j].weight; 
+            		if(dist[u] != INT_MAX && dist[u] + weight < dist[v]) 
+                		dist[v] = dist[u] + weight; 
+        	}	 
+    	}
+
+	return dist[airport2];
+}
+
+
+
+
+
+
