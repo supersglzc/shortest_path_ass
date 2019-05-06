@@ -304,16 +304,13 @@ int main(int argc, char **argv ){
 				}
 			}
 			gettimeofday(&tv4, NULL);
-			time2 = ((double)(tv4.tv_usec - tv3.tv_usec)) / 1000000 + ((double)(tv4.tv_sec - tv3.tv_sec));
-			printf("The dijkstra runs %f\n", time1);
-			printf("The bellman ford runs %f\n", time2);
-			int tr = 0;		
+			time2 = ((double)(tv4.tv_usec - tv3.tv_usec)) / 1000000 + ((double)(tv4.tv_sec - tv3.tv_sec));	
 			for(int i = 0; i < 200; i ++){
 				if (result1[i] == result2[i])
-					tr = 1;
+					printf("OK\n");
 			}
-			if (tr)
-				printf("correct!\n\n");
+			printf("The dijkstra runs %f\n", time1);
+                        printf("The bellman ford runs %f\n", time2);
 		}else
 			printf("Never here\n");
 		command = ask_command(airport1, airport2);
