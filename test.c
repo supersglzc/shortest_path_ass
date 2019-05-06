@@ -1,4 +1,6 @@
 #include <stdbool.h>
+#include <time.h>
+#include <sys/time.h>
 #include "graph.h"
 
 void substring(char s[], char sub[], int p, int l) {
@@ -16,6 +18,7 @@ int ask_command(char airport1 [], char airport2 []){
 	char * two = "quit";
 	char * three = "airport";
 	char * four = "distance";
+	char * five = "test";
 	printf("enter command> ");
 	scanf(" %[^\n]", command);
 	if (strlen(command) > 7){
@@ -29,7 +32,7 @@ int ask_command(char airport1 [], char airport2 []){
 		airport2[3] = '\0';
 //		printf("%s, %s\n", airport1, airport2);
 	}
-	while((strcmp(command, one) != 0) && (strcmp(command, two) != 0) && (strcmp(command, three) != 0) && (strcmp(command, four) != 0) ){
+	while((strcmp(command, one) != 0) && (strcmp(command, two) != 0) && (strcmp(command, three) != 0) && (strcmp(command, four) != 0) && (strcmp(command, five) != 0) ){
 //		printf("%s", command);
 		printf("Invalid command, please enter 'help' to know how to use the program!\n\n");
 		printf("enter command> ");
@@ -52,6 +55,8 @@ int ask_command(char airport1 [], char airport2 []){
                 return 3;
 	if (!strcmp(command, four))
                 return 4;
+	if (!strcmp(command, five))
+                return 5;
 	return 0;
 } 
 
@@ -146,9 +151,10 @@ int main(int argc, char **argv ){
     					}
     					fclose(file2);
 //					printf("here\n);
-					Vertex * node = malloc(sizeof(node));
+					Vertex * node = malloc(sizeof(Vertex));
 					dijkstra(new, airport11, airport22, length_of_airports, node, names2);
 					printf("Dijkstra Total Distance: %d\n", new->vertex[airport22]->cost);
+					free(node);
 					for (int i = 0; i < length_of_airports; i++){
                 				if(new->vertex[i]) {
                 					for(int j = 0; j < (new->vertex[i])->length; j++){
@@ -166,7 +172,7 @@ int main(int argc, char **argv ){
 				}
 				
 				FILE * file3 = fopen(argv[2], "r");
-                                if (file2 != NULL){
+                                if (file3 != NULL){
 					char airports1 [5000][4];
 					char airports2 [5000][4];
 					int distance [5000];
@@ -209,6 +215,87 @@ int main(int argc, char **argv ){
 				airport2[i] = '\0';
 			}
 			printf("\n");
+		}else if (command == 5){
+			printf("Entering the test...\n");
+			char air1 [200][4];
+			char air2 [200][4];
+			srand(time(0));
+			for(int i = 0; i < 400; i ++){
+				int num = rand() % (length_of_airports);
+				if (i < 200){
+					strcpy(air1[i], names[num]);
+					air1[i][4] = '\0';
+				}else{
+					strcpy(air2[i - 200], names[num]);
+					air2[i - 200][4] = '\0';
+				}
+			}
+			struct timeval tv1, tv2, tv3, tv4;
+			double time1, time2;
+//			int result1[200];
+//			int result2[200];
+
+
+			gettimeofday(&tv1, NULL);
+			for (int i = 0; i < 200; i ++){
+				FILE * file2 = fopen(argv[2], "r");
+				if (file2 != NULL){
+					Graph * new = create_graph(length_of_airports);
+					int value; 
+					char airport111[4]; 
+					char airport222[4];
+					while(fscanf(file2, "%s %s %d", airport111, airport222, &value) != EOF) {
+						int buffer1 = name_number[hash(airport111)];
+						int buffer2 = name_number[hash(airport222)];
+        					add(new, buffer1, buffer2, value);
+        					add(new, buffer2, buffer1, value);
+					}
+					fclose(file2);
+					Vertex * node = malloc(sizeof(node));
+					dijkstra(new, name_number[hash(air1[i])], name_number[hash(air2[i])], length_of_airports, node, names2);
+//					result1[i] = new->vertex[name_number[hash(air2[i])]]->cost;
+				}
+			}
+			gettimeofday(&tv2, NULL);
+			time1 = ((double)(tv2.tv_usec - tv1.tv_usec)) / 1000000 + ((double)(tv2.tv_sec - tv1.tv_sec));
+			
+			gettimeofday(&tv3, NULL);
+                        for (int i = 0; i < 200; i ++){
+				FILE * file2 = fopen(argv[2], "r");
+                                if (file2 != NULL){
+					char airports1 [5000][4];
+					char airports2 [5000][4];
+					int distance [5000];
+					for (int i = 0; i < 5000; i ++){
+						airports1[i][4] = '\0';
+						airports1[i][4] = '\0';
+						distance[i] = -1;
+					}	
+					int count = 0;
+					while(fscanf(file2, "%s %s %d", airports1[count], airports2[count], &distance[count]) != EOF){
+						count ++;
+					}
+					fclose(file2);	
+					Graph2 * new2 = create_bellman(length_of_airports, 2 * count);
+					int j = 0;
+					for (int i = 0; i < count * 2; i ++){
+						new2->edge[i].src = name_number[hash(airports1[j])];
+						new2->edge[i].dest = name_number[hash(airports2[j])];
+						new2->edge[i].weight = distance[j];
+						i ++;
+						new2->edge[i].src = name_number[hash(airports2[j])];
+                                                new2->edge[i].dest = name_number[hash(airports1[j])];
+                                                new2->edge[i].weight = distance[j];
+						j ++;
+					}
+//					result2[i] = BellmanFord(new2, name_number[hash(air1[i])], name_number[hash(air2[i])]);
+				}
+			}
+			gettimeofday(&tv4, NULL);
+			time2 = ((double)(tv4.tv_usec - tv3.tv_usec)) / 1000000 + ((double)(tv4.tv_sec - tv3.tv_sec));
+			printf("The dijkstra runs %f\n", time1);
+			printf("The bellman ford runs %f\n", time2);
+			printf("\n");		
 		}else
 			printf("Never here\n");
 		command = ask_command(airport1, airport2);
